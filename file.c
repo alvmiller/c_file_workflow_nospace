@@ -8,9 +8,9 @@
 #include <sys/stat.h>
 #include <time.h>
 
-const char *FILE_NAME = "/media/user1/3b6f63c6-3d92-45bc-8623-ed4645dbcb84/test.txt";
-const char *CREATE_TMP_FILE_COMMAND = "dd if=/dev/urandom of=/media/user1/3b6f63c6-3d92-45bc-8623-ed4645dbcb84/test_1.txt bs=500MB count=1";
-const char *DELETE_FILES_COMMAND = "rm -rf /media/user1/3b6f63c6-3d92-45bc-8623-ed4645dbcb84/*";
+const char *FILE_NAME = "/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt";
+const char *CREATE_TMP_FILE_COMMAND = "dd if=/dev/urandom of=/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt bs=500MB count=1";
+const char *DELETE_FILES_COMMAND = "rm -rf /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/*";
 // Partition size is 200MB
 // reset; gcc file.c ; ./a.out
 
@@ -39,7 +39,7 @@ int workflow(enum CMD_TYPE type)
     
     srand(time(NULL));
 
-    printf("Opening create...\n");
+    printf("\nOpening create...\n");
     int fd = open(FILE_NAME,
                    O_RDWR | O_CREAT | O_TRUNC | O_SYNC,
                    S_IWUSR | S_IRUSR | S_IWGRP | S_IRGRP | S_IROTH);
