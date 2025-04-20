@@ -20,16 +20,16 @@ enum CMD_TYPE {
     CMD_TYPE_RAND
 };
 
-int workflow(enum CMD_TYPE)
+int workflow(enum CMD_TYPE type)
 {
     printf("\n==================================\n");
     printf("==================================\n");
     printf("==================================\n");
     printf("\n==================================\n");
     printf("\n\t%s | %d | %s\n\n", __FILE__, __LINE__, __func__);
-    if (CMD_TYPE == CMD_TYPE_LSEEK) printf("\tTYPE == CMD_TYPE_LSEEK\n\n");
-    if (CMD_TYPE == CMD_TYPE_CALLOC) printf("\tTYPE == CMD_TYPE_CALLOC\n\n");
-    if (CMD_TYPE == CMD_TYPE_RAND) printf("\tTYPE == CMD_TYPE_RAND\n\n");
+    if (type == CMD_TYPE_LSEEK) printf("\tTYPE == CMD_TYPE_LSEEK\n\n");
+    if (type == CMD_TYPE_CALLOC) printf("\tTYPE == CMD_TYPE_CALLOC\n\n");
+    if (type == CMD_TYPE_RAND) printf("\tTYPE == CMD_TYPE_RAND\n\n");
     
     sync();
     system(DELETE_FILES_COMMAND);
@@ -52,7 +52,7 @@ int workflow(enum CMD_TYPE)
     char *buf = NULL;
     int ret = -1;
     
-    if (CMD_TYPE == CMD_TYPE_LSEEK) {
+    if (type == CMD_TYPE_LSEEK) {
         len = 1;
         printf("Writing data to file (%zu)...\n", len);
         ret = write(fd, (void *)"0x42", len);
@@ -64,7 +64,7 @@ int workflow(enum CMD_TYPE)
     
     len = 1024 * 80000;
     
-    if (CMD_TYPE == CMD_TYPE_LSEEK) {
+    if (type == CMD_TYPE_LSEEK) {
         printf("Writing  lseek data to file (%zu)...\n", len);
         printf("Seek file...\n");
         off_t ret_lseek = lseek(fd, len - 1, SEEK_SET);
@@ -81,7 +81,7 @@ int workflow(enum CMD_TYPE)
             perror("\tGot error");
         }
     }
-    if (CMD_TYPE == CMD_TYPE_CALLOC) {
+    if (type == CMD_TYPE_CALLOC) {
         printf("Writing calloc data to file (%zu)...\n", len);
         buf = calloc(1, len);
         ret = write(fd, buf, len);
@@ -90,9 +90,9 @@ int workflow(enum CMD_TYPE)
             perror("\tGot error");
         }
     }
-    if (CMD_TYPE == CMD_TYPE_RAND) {
+    if (type == CMD_TYPE_RAND) {
         printf("Writing calloc data to file (%zu)...\n", len);
-        buf = malloc(1, len);
+        buf = malloc(len);
         for (size_t i = 0; i < len; ++i) {
             buf[i] = rand() % 100 + 1;
         }
