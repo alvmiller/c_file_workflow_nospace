@@ -101,6 +101,8 @@ int workflow(enum CMD_TYPE type)
             printf("\tYoy!!!\n");
             perror("\tGot error");
         }
+        
+        len = 1024 * 80000;
     }
 
     printf("File should be %zu...\n", len);
