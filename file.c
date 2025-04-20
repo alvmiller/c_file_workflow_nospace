@@ -116,6 +116,7 @@ int workflow(enum CMD_TYPE type)
     }
     
     len = 1024 * 100000;
+    printf("File should be %zu...\n", len);
     
     printf("Closing file...\n");
     if (close(fd) == -1) {
@@ -125,7 +126,6 @@ int workflow(enum CMD_TYPE type)
     free(buf);
     buf = NULL;
     len = -1;
-    printf("File should be %zu...\n", len);
     
     sync();
     sleep(3);
