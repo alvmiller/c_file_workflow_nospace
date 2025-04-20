@@ -11,11 +11,15 @@
 const char *FILE_NAME = "/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt";
 const char *CREATE_TMP_FILE_COMMAND = "dd if=/dev/urandom of=/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt bs=500MB count=1";
 const char *DELETE_FILES_COMMAND = "rm -rf /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/*";
+const char *LS_LA_FILES = "ls -la /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/";
 // Partition size is 200MB
 // reset; gcc file.c ; ./a.out
 
 enum CMD_TYPE {
-    CMD_TYPE_LSEEK,
+    CMD_TYPE_LSEEK_2FL,
+    CMD_TYPE_LSEEK_1F,
+    CMD_TYPE_LSEEK_1L,
+    CMD_TYPE_LSEEK_0,
     CMD_TYPE_CALLOC,
     CMD_TYPE_RAND
 };
@@ -27,12 +31,18 @@ int workflow(enum CMD_TYPE type)
     printf("==================================\n");
     printf("\n==================================\n");
     printf("\n\t%s | %d | %s\n\n", __FILE__, __LINE__, __func__);
-    if (type == CMD_TYPE_LSEEK) printf("\tTYPE == CMD_TYPE_LSEEK\n\n");
+    if (type == CMD_TYPE_LSEEK_2FL) printf("\tTYPE == CMD_TYPE_LSEEK_2FL\n\n");
+    if (type == CMD_TYPE_LSEEK_1F) printf("\tTYPE == CMD_TYPE_LSEEK_1F\n\n");
+    if (type == CMD_TYPE_LSEEK_1L) printf("\tTYPE == CMD_TYPE_LSEEK_1L\n\n");
+    if (type == CMD_TYPE_LSEEK_0) printf("\tTYPE == CMD_TYPE_LSEEK_0\n\n");
     if (type == CMD_TYPE_CALLOC) printf("\tTYPE == CMD_TYPE_CALLOC\n\n");
     if (type == CMD_TYPE_RAND) printf("\tTYPE == CMD_TYPE_RAND\n\n");
     
     sync();
     system(DELETE_FILES_COMMAND);
+    printf("\n");
+    system(LS_LA_FILES);
+    printf("\n");
     sync();
     sleep(3);
     system("df");
@@ -52,7 +62,7 @@ int workflow(enum CMD_TYPE type)
     char *buf = NULL;
     int ret = -1;
     
-    if (type == CMD_TYPE_LSEEK) {
+    if (type == CMD_TYPE_LSEEK_2FL || type == CMD_TYPE_LSEEK_1F) {
         len = 1;
         printf("Writing data to file (%zu)...\n", len);
         ret = write(fd, (void *)"0x42", len);
@@ -62,9 +72,9 @@ int workflow(enum CMD_TYPE type)
         }
     }
     
-    len = 1024 * 80000;
+    len = 1024 * 100000;
     
-    if (type == CMD_TYPE_LSEEK) {
+    if (type == CMD_TYPE_LSEEK_2FL || type == CMD_TYPE_LSEEK_1F || type == CMD_TYPE_LSEEK_1L || type == CMD_TYPE_LSEEK_0) {
         printf("Writing  lseek data to file (%zu)...\n", len);
         printf("Seek file...\n");
         off_t ret_lseek = lseek(fd, len - 1, SEEK_SET);
@@ -73,12 +83,14 @@ int workflow(enum CMD_TYPE type)
             return -1;
         }
     
-        len = 1;
-        printf("Writing data to file (%zu)...\n", len);
-        ret = write(fd, (void *)"0x42", len);
-        if (ret == -1) {
-            printf("\tYoy!!!\n");
-            perror("\tGot error");
+        if (type == CMD_TYPE_LSEEK_2FL || type == CMD_TYPE_LSEEK_1L) {
+            len = 1;
+            printf("Writing data to file (%zu)...\n", len);
+            ret = write(fd, (void *)"0x42", len);
+            if (ret == -1) {
+                printf("\tYoy!!!\n");
+                perror("\tGot error");
+            }
         }
     }
     if (type == CMD_TYPE_CALLOC) {
@@ -101,11 +113,9 @@ int workflow(enum CMD_TYPE type)
             printf("\tYoy!!!\n");
             perror("\tGot error");
         }
-        
-        len = 1024 * 80000;
     }
-
-    printf("File should be %zu...\n", len);
+    
+    len = 1024 * 100000;
     
     printf("Closing file...\n");
     if (close(fd) == -1) {
@@ -115,8 +125,14 @@ int workflow(enum CMD_TYPE type)
     free(buf);
     buf = NULL;
     len = -1;
+    printf("File should be %zu...\n", len);
     
     sync();
+    sleep(3);
+    printf("\n");
+    system(LS_LA_FILES);
+    printf("\n");
+    
     printf("Getting stat...\n");
     struct stat st0 = {}; 
     if (stat(FILE_NAME, &st0) == -1) {
@@ -129,7 +145,7 @@ int workflow(enum CMD_TYPE type)
     system("df");
     sync();
     printf("\n");
-    sleep(5);
+    sleep(3);
     
     printf("DD...\n");
     system(CREATE_TMP_FILE_COMMAND);
@@ -137,7 +153,10 @@ int workflow(enum CMD_TYPE type)
     system("df");
     sync();
     printf("\n");
-    sleep(5);
+    sleep(3);
+    printf("\n");
+    system(LS_LA_FILES);
+    printf("\n");
     
     printf("Opening...\n");
     fd = open(FILE_NAME,
@@ -158,7 +177,6 @@ int workflow(enum CMD_TYPE type)
     if (ret == -1) {
         printf("\tYoy!!!\n");
         perror("\tGot error");
-        //return -1;
     }
     printf("Closing file...\n");
     if (close(fd) == -1) {
@@ -167,11 +185,13 @@ int workflow(enum CMD_TYPE type)
     }
     free(buf);
     buf = NULL;
-    len = -1;
     
-    printf("\n");
     sync();
     sleep(3);
+    printf("\n");
+    system(LS_LA_FILES);
+    printf("\n");
+    
     printf("Getting stat...\n"); 
     if (stat(FILE_NAME, &st0) == -1) {
         perror("\tGot error");
@@ -181,15 +201,19 @@ int workflow(enum CMD_TYPE type)
     printf("\n");
     system("df");
     printf("\n");
-    sleep(5);
+    sleep(3);
     
-    printf("Getting truncate...\n"); 
-    if (truncate(FILE_NAME, len) == -1) {
+    printf("Getting truncate (%zu)...\n", len); 
+    printf("File Name: %s\n", FILE_NAME);
+    if (truncate(FILE_NAME, (off_t)len) == -1) {
         perror("\tGot error");
         return -1;
     }
     sync();
     sleep(3);
+    printf("\n");
+    system(LS_LA_FILES);
+    printf("\n");
     
     printf("\n");
     system("df");
@@ -218,7 +242,10 @@ int main()
 {
     system("reset");
     
-    (void)workflow(CMD_TYPE_LSEEK);
+    (void)workflow(CMD_TYPE_LSEEK_2FL);
+    (void)workflow(CMD_TYPE_LSEEK_1F);
+    (void)workflow(CMD_TYPE_LSEEK_1L);
+    (void)workflow(CMD_TYPE_LSEEK_0);
     (void)workflow(CMD_TYPE_CALLOC);
     (void)workflow(CMD_TYPE_RAND);
 
