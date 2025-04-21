@@ -1,0 +1,886 @@
+==================================
+==================================
+==================================
+
+==================================
+
+	file_lsek.c | 33 | workflow
+
+	TYPE == CMD_TYPE_LSEEK_2FL
+
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 11:58 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1532    811712   1% /run
+/dev/sda3       48349356 16286916  29574020  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Opening create...
+Writing data to file (1)...
+Writing  lseek data to file (102400000)...
+Seek file...
+Writing data to file (1)...
+File should be 102400000...
+Closing file...
+
+total 20
+drwx------  3 user1 user1      4096 кві 21 11:58 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 102400000 кві 21 11:58 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1532    811712   1% /run
+/dev/sda3       48349356 16286916  29574020  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       32    161024   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+DD...
+dd: error writing '/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt': No space left on device
+1+0 records in
+0+0 records out
+164888576 bytes (165 MB, 157 MiB) copied, 7,32273 s, 22,5 MB/s
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1532    811712   1% /run
+/dev/sda3       48349356 16286916  29574020  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+total 161048
+drwx------  3 user1 user1      4096 кві 21 11:58 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164888576 кві 21 11:58 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 11:58 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Opening...
+Writing data to file (40960000)...
+Closing file...
+
+total 161048
+drwx------  3 user1 user1      4096 кві 21 11:58 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164888576 кві 21 11:58 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 11:58 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286900  29574036  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161060         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting truncate (40960000)...
+File Name: /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:58 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164888576 кві 21 11:58 test_1.txt
+-rw-rw-r--  1 user1 user1  40960000 кві 21 11:58 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286900  29574036  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting stat...
+file size: 40960000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286900  29574036  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+	file_lsek.c | 33 | workflow
+
+	TYPE == CMD_TYPE_LSEEK_1F
+
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 11:58 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286900  29574036  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Opening create...
+Writing data to file (1)...
+Writing  lseek data to file (102400000)...
+Seek file...
+File should be 102400000...
+Closing file...
+
+total 16
+drwx------  3 user1 user1 4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1    1 кві 21 11:59 test.txt
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 1
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286900  29574036  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       28    161028   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+DD...
+dd: error writing '/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt': No space left on device
+1+0 records in
+0+0 records out
+164892672 bytes (165 MB, 157 MiB) copied, 2,16429 s, 76,2 MB/s
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286936  29574000  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164892672 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1         1 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Opening...
+Writing data to file (40960000)...
+Closing file...
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164892672 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1      4096 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 4096
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting truncate (40960000)...
+File Name: /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164892672 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1  40960000 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting stat...
+file size: 40960000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+	file_lsek.c | 33 | workflow
+
+	TYPE == CMD_TYPE_LSEEK_1L
+
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Opening create...
+Writing  lseek data to file (102400000)...
+Seek file...
+Writing data to file (1)...
+File should be 102400000...
+Closing file...
+
+total 16
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 102400000 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       28    161028   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+DD...
+dd: error writing '/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt': No space left on device
+1+0 records in
+0+0 records out
+164892672 bytes (165 MB, 157 MiB) copied, 3,27293 s, 50,4 MB/s
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1536    811708   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+total 161048
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164892672 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Opening...
+Writing data to file (40960000)...
+	Yoy!!!
+	Got error: No space left on device
+Closing file...
+
+total 161048
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164892672 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161060         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting truncate (40960000)...
+File Name: /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164892672 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1  40960000 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting stat...
+file size: 40960000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+	file_lsek.c | 33 | workflow
+
+	TYPE == CMD_TYPE_LSEEK_0
+
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Opening create...
+Writing  lseek data to file (102400000)...
+Seek file...
+File should be 102400000...
+Closing file...
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1    0 кві 21 11:59 test.txt
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 0
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+DD...
+dd: error writing '/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt': No space left on device
+1+0 records in
+0+0 records out
+164896768 bytes (165 MB, 157 MiB) copied, 2,06284 s, 79,9 MB/s
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164896768 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1         0 кві 21 11:59 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Opening...
+Writing data to file (40960000)...
+	Yoy!!!
+	Got error: No space left on device
+Closing file...
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164896768 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1         0 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 0
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting truncate (40960000)...
+File Name: /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 11:59 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 164896768 кві 21 11:59 test_1.txt
+-rw-rw-r--  1 user1 user1  40960000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting stat...
+file size: 40960000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+	file_lsek.c | 33 | workflow
+
+	TYPE == CMD_TYPE_CALLOC
+
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Opening create...
+Writing calloc data to file (102400000)...
+File should be 102400000...
+Closing file...
+
+total 100012
+drwx------  3 user1 user1      4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 102400000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   100024     61032  63% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+DD...
+dd: error writing '/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt': No space left on device
+1+0 records in
+0+0 records out
+62496768 bytes (62 MB, 60 MiB) copied, 2,05187 s, 30,5 MB/s
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1  62496768 кві 21 12:00 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Opening...
+Writing data to file (40960000)...
+Closing file...
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1  62496768 кві 21 12:00 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting truncate (40960000)...
+File Name: /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt
+
+total 101044
+drwx------  3 user1 user1     4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root      4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 62496768 кві 21 12:00 test_1.txt
+-rw-rw-r--  1 user1 user1 40960000 кві 21 12:00 test.txt
+drwx------  5 user1 user1     4096 кві 21 11:58 .Trash-1000
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   101056     60000  63% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting stat...
+file size: 40960000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   101056     60000  63% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+
+==================================
+==================================
+==================================
+
+==================================
+
+	file_lsek.c | 33 | workflow
+
+	TYPE == CMD_TYPE_RAND
+
+
+total 12
+drwx------  3 user1 user1 4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root  4096 кві 21 11:58 ..
+drwx------  5 user1 user1 4096 кві 21 11:58 .Trash-1000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392       24    161032   1% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Opening create...
+Writing calloc data to file (102400000)...
+File should be 102400000...
+Closing file...
+
+total 100012
+drwx------  3 user1 user1      4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 102400000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   100024     61032  63% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+DD...
+dd: error writing '/media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test_1.txt': No space left on device
+1+0 records in
+0+0 records out
+62496768 bytes (62 MB, 60 MiB) copied, 1,84141 s, 33,9 MB/s
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1  62496768 кві 21 12:00 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Opening...
+Writing data to file (40960000)...
+Closing file...
+
+total 161044
+drwx------  3 user1 user1      4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root       4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1  62496768 кві 21 12:00 test_1.txt
+-rw-rw-r--  1 user1 user1 102400000 кві 21 12:00 test.txt
+drwx------  5 user1 user1      4096 кві 21 11:58 .Trash-1000
+
+Getting stat...
+file size: 102400000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   161056         0 100% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting truncate (40960000)...
+File Name: /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48/test.txt
+
+total 101044
+drwx------  3 user1 user1     4096 кві 21 12:00 .
+drwxr-x---+ 4 root  root      4096 кві 21 11:58 ..
+-rw-rw-r--  1 user1 user1 62496768 кві 21 12:00 test_1.txt
+-rw-rw-r--  1 user1 user1 40960000 кві 21 12:01 test.txt
+drwx------  5 user1 user1     4096 кві 21 11:58 .Trash-1000
+
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   101056     60000  63% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+Getting stat...
+file size: 40960000
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             813244     1528    811716   1% /run
+/dev/sda3       48349356 16286972  29573964  36% /
+tmpfs            4066208        0   4066208   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+/dev/sda2         524252     6228    518024   2% /boot/efi
+E_DRIVE         32505852    76504  32429348   1% /media/sf_E_DRIVE
+tmpfs             813240      108    813132   1% /run/user/1000
+/dev/sr0           58814    58814         0 100% /media/user1/VBox_GAs_7.1.6
+/dev/sdb          175392   101056     60000  63% /media/user1/355e9783-5dd5-4d08-a336-9c44bb422f48
+
+
+==================================
+==================================
+==================================
+
+==================================
